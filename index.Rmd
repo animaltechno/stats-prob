@@ -1,18 +1,16 @@
 --- 
-title: "A Minimal Book Example"
-author: "John Doe"
+title: "Rに関する確率と統計のメモ"
+author: "animaltechno"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
-# url: your book url like https://bookdown.org/yihui/bookdown
+url: your book url like https://animaltechno.github.io/stats-prob/
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  This is a minimal example of using the bookdown package to write a book.
-  The HTML output format for this example is bookdown::gitbook,
-  set in the _output.yml file.
+  Rに関する確率と統計のメモを記述したノート
 link-citations: yes
-github-repo: rstudio/bookdown-demo
+github-repo: animaltechno/stats-prob
 ---
 
 # About
@@ -26,6 +24,10 @@ Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (a
 Use second-level and higher headings within chapters like: `## A short section` or `### An even shorter section`.
 
 The `index.Rmd` file is required, and is also your first book chapter. It will be the homepage when you render the book.
+
+## 参考文献
+
+参考文献は以下の通り
 
 ## Render book
 
