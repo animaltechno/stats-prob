@@ -2,10 +2,7 @@ fig:nice-fig
 tab:nice-tab
 eq:binom
 thm:tri
-about
-usage
-render-book
-preview-book
+はじめに
 参考文献
 hello-bookdown
 a-section
@@ -24,4 +21,3 @@ sharing-your-book
 publishing
 pages
 metadata-for-sharing
-はじめに
