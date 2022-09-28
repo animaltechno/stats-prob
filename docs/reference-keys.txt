@@ -6,6 +6,7 @@ about
 usage
 render-book
 preview-book
+参考文献
 hello-bookdown
 a-section
 cross
@@ -23,5 +24,4 @@ sharing-your-book
 publishing
 pages
 metadata-for-sharing
-url-your-book-url-like-httpsbookdown.orgyihuibookdown
-参考文献
+はじめに
