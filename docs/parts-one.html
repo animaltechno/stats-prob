@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Rに関する確率と統計のメモ</title>
-  <meta name="description" content="Rに関する確率と統計のメモを記述したノート" />
+  <title>Chapter 3 Parts One | Rに関する確率と統計のメモ</title>
+  <meta name="description" content="Chapter 3 Parts One | Rに関する確率と統計のメモを記述したノート" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Rに関する確率と統計のメモ" />
+  <meta property="og:title" content="Chapter 3 Parts One | Rに関する確率と統計のメモ" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="your book url like https://animaltechno.github.io/stats-prob/" />
   
-  <meta property="og:description" content="Rに関する確率と統計のメモを記述したノート" />
+  <meta property="og:description" content="Chapter 3 Parts One | Rに関する確率と統計のメモを記述したノート" />
   <meta name="github-repo" content="animaltechno/stats-prob" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Rに関する確率と統計のメモ" />
+  <meta name="twitter:title" content="Chapter 3 Parts One | Rに関する確率と統計のメモ" />
   
-  <meta name="twitter:description" content="Rに関する確率と統計のメモを記述したノート" />
+  <meta name="twitter:description" content="Chapter 3 Parts One | Rに関する確率と統計のメモを記述したノート" />
   
 
 
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="乱数の発生.html"/>
+<link rel="prev" href="cross.html"/>
+<link rel="next" href="footnotes-and-citations.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -118,6 +118,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,16 +157,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>はじめに</a></li>
 <li class="chapter" data-level="1" data-path="乱数の発生.html"><a href="乱数の発生.html"><i class="fa fa-check"></i><b>1</b> 乱数の発生</a></li>
 <li class="chapter" data-level="2" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>2</b> Cross-references</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>2.1</b> Chapters and sub-chapters</a></li>
 <li class="chapter" data-level="2.2" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>2.2</b> Captioned figures and tables</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="parts.html"><a href="parts.html"><i class="fa fa-check"></i><b>3</b> Parts</a></li>
-<li class="part"><span><b>I Act one</b></span></li>
-<li class="chapter" data-level="4" data-path="線形代数.html"><a href="線形代数.html"><i class="fa fa-check"></i><b>4</b> 線形代数</a></li>
+<li class="chapter" data-level="3" data-path="parts-one.html"><a href="parts-one.html"><i class="fa fa-check"></i><b>3</b> Parts One</a></li>
+<li class="chapter" data-level="4" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>4</b> Footnotes and citations</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>4.1</b> Footnotes</a></li>
+<li class="chapter" data-level="4.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>4.2</b> Citations</a></li>
+</ul></li>
 <li class="chapter" data-level="5" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>5</b> Blocks</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>5.1</b> Equations</a></li>
@@ -178,13 +202,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Rに関する確率と統計のメモ</h1>
-<p class="date"><em>最終更新日: 2022-09-29</em></p>
-</div>
-<div id="はじめに" class="section level1 unnumbered">
-<h1>はじめに</h1>
-<p>Rに関する確率と統計に関するメモ</p>
+<div id="parts-one" class="section level1" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Parts One</h1>
+<p>You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file.</p>
+<p>Add a numbered part: <code># (PART) Act one {-}</code> (followed by <code># A chapter</code>)</p>
+<p>Add an unnumbered part: <code># (PART\*) Act one {-}</code> (followed by <code># A chapter</code>)</p>
+<p>Add an appendix as a special kind of un-numbered part: <code># (APPENDIX) Other stuff {-}</code> (followed by <code># A chapter</code>). Chapters in an appendix are prepended with letters instead of numbers.</p>
 
 </div>
             </section>
@@ -192,8 +215,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-
-<a href="乱数の発生.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="cross.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="footnotes-and-citations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -224,7 +247,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-parts.Rmd",
 "text": "Edit"
 },
 "history": {

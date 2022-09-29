@@ -30,7 +30,7 @@
   
   
 
-<link rel="next" href="乱数の発生.html"/>
+<link rel="next" href="cross.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -135,7 +135,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>はじめに</a></li>
 <li class="chapter" data-level="1" data-path="乱数の発生.html"><a href="乱数の発生.html"><i class="fa fa-check"></i><b>1</b> 乱数の発生</a></li>
 <li class="chapter" data-level="2" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>2</b> Cross-references</a>
 <ul>
@@ -182,9 +181,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1 class="title">Rに関する確率と統計のメモ</h1>
 <p class="date"><em>最終更新日: 2022-09-29</em></p>
 </div>
-<div id="はじめに" class="section level1 unnumbered">
-<h1>はじめに</h1>
-<p>Rに関する確率と統計に関するメモ</p>
+<div id="乱数の発生" class="section level1" number="1">
+<h1><span class="header-section-number">Chapter 1</span> 乱数の発生</h1>
+<p>Rには様々な分布から乱数を生成させる関数があり、各関数名の頭文字がその用途を表す。</p>
+<ul>
+<li><code>r</code> : 擬似乱数発生の関数</li>
+<li><code>d</code> : 密度関数</li>
+<li><code>p</code> : 分布関数</li>
+<li><code>q</code> : 分位点関数</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="乱数の発生.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12345</span>)</span>
+<span id="cb1-2"><a href="乱数の発生.html#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="乱数の発生.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1]  0.5855288  0.7094660 -0.1093033</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="乱数の発生.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] -0.4534972  0.6058875 -1.8179560</code></pre>
 
 </div>
             </section>
@@ -193,7 +204,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 
-<a href="乱数の発生.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="cross.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -224,7 +235,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/00-intro.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -247,6 +258,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
