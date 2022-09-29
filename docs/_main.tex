@@ -116,25 +116,8 @@
 
 \title{Rに関する確率と統計のメモ}
 \author{}
-\date{\vspace{-2.5em}最終更新日: 2022-09-28}
+\date{\vspace{-2.5em}最終更新日: 2022-09-29}
 
-\usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\newtheorem{conjecture}{Conjecture}[chapter]
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[chapter]
-\theoremstyle{definition}
-\newtheorem{example}{Example}[chapter]
-\theoremstyle{definition}
-\newtheorem{exercise}{Exercise}[chapter]
-\theoremstyle{definition}
-\newtheorem{hypothesis}{Hypothesis}[chapter]
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
-\newtheorem*{solution}{Solution}
 \begin{document}
 \maketitle
 
@@ -143,30 +126,49 @@
 \tableofcontents
 }
 \hypertarget{ux306fux3058ux3081ux306b}{%
-\chapter{はじめに}\label{ux306fux3058ux3081ux306b}}
+\chapter*{はじめに}\label{ux306fux3058ux3081ux306b}}
+\addcontentsline{toc}{chapter}{はじめに}
 
-Rに関する確率と統計に関するメモを記したノート
+Rに関する確率と統計に関するメモ
 
-\hypertarget{ux53c2ux8003ux6587ux732e}{%
-\section{参考文献}\label{ux53c2ux8003ux6587ux732e}}
+\hypertarget{ux4e71ux6570ux306eux767aux751f}{%
+\chapter{乱数の発生}\label{ux4e71ux6570ux306eux767aux751f}}
 
-参考文献は以下の通り
+Rには様々な分布から乱数を生成させる関数があり、各関数名の頭文字がその用途を表す。
 
-\hypertarget{hello-bookdown}{%
-\chapter{Hello bookdown}\label{hello-bookdown}}
+\begin{itemize}
+\tightlist
+\item
+  \texttt{r} : 擬似乱数発生の関数
+\item
+  \texttt{d} : 密度関数
+\item
+  \texttt{p} : 分布関数
+\item
+  \texttt{q} : 分位点関数
+\end{itemize}
 
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (\texttt{\#}) per .Rmd file.
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{12345}\NormalTok{)}
 
-\hypertarget{a-section}{%
-\section{A section}\label{a-section}}
+\FunctionTok{rnorm}\NormalTok{(}\DecValTok{3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
-All chapter sections start with a second-level (\texttt{\#\#}) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
+\begin{verbatim}
+## [1]  0.5855288  0.7094660 -0.1093033
+\end{verbatim}
 
-\hypertarget{an-unnumbered-section}{%
-\subsection*{An unnumbered section}\label{an-unnumbered-section}}
-\addcontentsline{toc}{subsection}{An unnumbered section}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{rnorm}\NormalTok{(}\DecValTok{3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
-Chapters and sections are numbered by default. To un-number a heading, add a \texttt{\{.unnumbered\}} or the shorter \texttt{\{-\}} at the end of the heading, like in this section.
+\begin{verbatim}
+## [1] -0.4534972  0.6058875 -1.8179560
+\end{verbatim}
 
 \hypertarget{cross}{%
 \chapter{Cross-references}\label{cross}}
@@ -269,95 +271,11 @@ Add an unnumbered part: \texttt{\#\ (PART\textbackslash{}*)\ Act\ one\ \{-\}} (f
 
 Add an appendix as a special kind of un-numbered part: \texttt{\#\ (APPENDIX)\ Other\ stuff\ \{-\}} (followed by \texttt{\#\ A\ chapter}). Chapters in an appendix are prepended with letters instead of numbers.
 
-\hypertarget{footnotes-and-citations}{%
-\chapter{Footnotes and citations}\label{footnotes-and-citations}}
+\hypertarget{part-act-one}{%
+\part{Act one}\label{part-act-one}}
 
-\hypertarget{footnotes}{%
-\section{Footnotes}\label{footnotes}}
-
-Footnotes are put inside the square brackets after a caret \texttt{\^{}{[}{]}}. Like this one \footnote{This is a footnote.}.
-
-\hypertarget{citations}{%
-\section{Citations}\label{citations}}
-
-Reference items in your bibliography file(s) using \texttt{@key}.
-
-For example, we are using the \textbf{bookdown} package \citep{R-bookdown} (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015} (this citation was added manually in an external file book.bib).
-Note that the \texttt{.bib} files need to be listed in the index.Rmd with the YAML \texttt{bibliography} key.
-
-\citep{takezawa2012}
-
-\citep{kyo2010}
-
-The RStudio Visual Markdown Editor can also make it easier to insert citations: \url{https://rstudio.github.io/visual-markdown-editing/\#/citations}
-
-\hypertarget{blocks}{%
-\chapter{Blocks}\label{blocks}}
-
-\hypertarget{equations}{%
-\section{Equations}\label{equations}}
-
-Here is an equation.
-
-\begin{equation} 
-  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
-  \label{eq:binom}
-\end{equation}
-
-You may refer to using \texttt{\textbackslash{}@ref(eq:binom)}, like see Equation \eqref{eq:binom}.
-
-\hypertarget{theorems-and-proofs}{%
-\section{Theorems and proofs}\label{theorems-and-proofs}}
-
-Labeled theorems can be referenced in text using \texttt{\textbackslash{}@ref(thm:tri)}, for example, check out this smart theorem \ref{thm:tri}.
-
-\begin{theorem}
-\protect\hypertarget{thm:tri}{}\label{thm:tri}For a right triangle, if \(c\) denotes the \emph{length} of the hypotenuse
-and \(a\) and \(b\) denote the lengths of the \textbf{other} two sides, we have
-\[a^2 + b^2 = c^2\]
-\end{theorem}
-
-Read more here \url{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html}.
-
-\hypertarget{callout-blocks}{%
-\section{Callout blocks}\label{callout-blocks}}
-
-The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: \url{https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html}
-
-\hypertarget{sharing-your-book}{%
-\chapter{Sharing your book}\label{sharing-your-book}}
-
-\hypertarget{publishing}{%
-\section{Publishing}\label{publishing}}
-
-HTML books can be published online, see: \url{https://bookdown.org/yihui/bookdown/publishing.html}
-
-\hypertarget{pages}{%
-\section{404 pages}\label{pages}}
-
-By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you'd like to customize your 404 page instead of using the default, you may add either a \texttt{\_404.Rmd} or \texttt{\_404.md} file to your project root and use code and/or Markdown syntax.
-
-\hypertarget{metadata-for-sharing}{%
-\section{Metadata for sharing}\label{metadata-for-sharing}}
-
-Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the \texttt{index.Rmd} YAML. To setup, set the \texttt{url} for your book and the path to your \texttt{cover-image} file. Your book's \texttt{title} and \texttt{description} are also used.
-
-This \texttt{gitbook} uses the same social sharing data across all chapters in your book- all links shared will look the same.
-
-Specify your book's source repository on GitHub using the \texttt{edit} key under the configuration options in the \texttt{\_output.yml} file, which allows users to suggest an edit by linking to a chapter's source file.
-
-Read more about the features of this output format here:
-
-\url{https://pkgs.rstudio.com/bookdown/reference/gitbook.html}
-
-Or use:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{?bookdown}\SpecialCharTok{::}\NormalTok{gitbook}
-\end{Highlighting}
-\end{Shaded}
-
+\hypertarget{ux7ddaux5f62ux4ee3ux6570}{%
+\chapter{線形代数}\label{ux7ddaux5f62ux4ee3ux6570}}
 
   \bibliography{book.bib,packages.bib}
 
