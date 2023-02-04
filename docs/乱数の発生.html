@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 乱数の発生 | Rに関する確率と統計のメモ</title>
-  <meta name="description" content="Chapter 1 乱数の発生 | Rに関する確率と統計のメモを記述したノート" />
+  <title>Chapter 2 乱数の発生 | Rに関する確率と統計のメモ</title>
+  <meta name="description" content="Chapter 2 乱数の発生 | Rに関する確率と統計のメモを記述したノート" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 乱数の発生 | Rに関する確率と統計のメモ" />
+  <meta property="og:title" content="Chapter 2 乱数の発生 | Rに関する確率と統計のメモ" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="your book url like https://animaltechno.github.io/stats-prob/" />
   
-  <meta property="og:description" content="Chapter 1 乱数の発生 | Rに関する確率と統計のメモを記述したノート" />
+  <meta property="og:description" content="Chapter 2 乱数の発生 | Rに関する確率と統計のメモを記述したノート" />
   <meta name="github-repo" content="animaltechno/stats-prob" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 乱数の発生 | Rに関する確率と統計のメモ" />
+  <meta name="twitter:title" content="Chapter 2 乱数の発生 | Rに関する確率と統計のメモ" />
   
-  <meta name="twitter:description" content="Chapter 1 乱数の発生 | Rに関する確率と統計のメモを記述したノート" />
+  <meta name="twitter:description" content="Chapter 2 乱数の発生 | Rに関する確率と統計のメモを記述したノート" />
   
 
 
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="基本.html"/>
+<link rel="prev" href="基本.html"/>
+<link rel="next" href="cross.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -136,11 +136,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>はじめに</a></li>
-<li class="chapter" data-level="1" data-path="乱数の発生.html"><a href="乱数の発生.html"><i class="fa fa-check"></i><b>1</b> 乱数の発生</a></li>
-<li class="chapter" data-level="2" data-path="基本.html"><a href="基本.html"><i class="fa fa-check"></i><b>2</b> 基本</a>
+<li class="chapter" data-level="1" data-path="基本.html"><a href="基本.html"><i class="fa fa-check"></i><b>1</b> 基本</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="基本.html"><a href="基本.html#基本-1"><i class="fa fa-check"></i><b>2.1</b> 基本</a></li>
-<li class="chapter" data-level="2.2" data-path="基本.html"><a href="基本.html#基本その二"><i class="fa fa-check"></i><b>2.2</b> 基本(その二)</a></li>
+<li class="chapter" data-level="1.1" data-path="基本.html"><a href="基本.html#基本-1"><i class="fa fa-check"></i><b>1.1</b> 基本</a></li>
+<li class="chapter" data-level="1.2" data-path="基本.html"><a href="基本.html#基本その二"><i class="fa fa-check"></i><b>1.2</b> 基本(その二)</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="乱数の発生.html"><a href="乱数の発生.html"><i class="fa fa-check"></i><b>2</b> 乱数の発生</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="乱数の発生.html"><a href="乱数の発生.html#逆変換法"><i class="fa fa-check"></i><b>2.1</b> 逆変換法</a></li>
+<li class="chapter" data-level="2.2" data-path="乱数の発生.html"><a href="乱数の発生.html#受容棄却法"><i class="fa fa-check"></i><b>2.2</b> 受容棄却法</a></li>
+<li class="chapter" data-level="2.3" data-path="乱数の発生.html"><a href="乱数の発生.html#変換法"><i class="fa fa-check"></i><b>2.3</b> 変換法</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>3</b> Cross-references</a>
 <ul>
@@ -170,8 +175,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="乱数の発生" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> 乱数の発生</h1>
+<div id="乱数の発生" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> 乱数の発生</h1>
 <p>Rには様々な分布から乱数を生成させる関数があり、関数名の頭文字がその用途を表す。</p>
 <ul>
 <li><code>r</code> : 擬似乱数(random generator)</li>
@@ -200,6 +205,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>sample(letters)</code> : 小文字</li>
 <li>指定した分布からサンプルする <code>sample(1:3, size=10, replace=TRUE, prob=c(.2, .3, .5)</code></li>
 </ul>
+<div id="逆変換法" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> 逆変換法</h2>
+<p>Ex3.2</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="乱数の発生.html#cb2-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
 <span id="cb2-2"><a href="乱数の発生.html#cb2-2" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="fu">runif</span>(n)</span>
 <span id="cb2-3"><a href="乱数の発生.html#cb2-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> u<span class="sc">^</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>)</span>
@@ -208,16 +216,86 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-6"><a href="乱数の発生.html#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-7"><a href="乱数の発生.html#cb2-7" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, .<span class="dv">01</span>)</span>
 <span id="cb2-8"><a href="乱数の発生.html#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(y, <span class="dv">3</span><span class="sc">*</span>y<span class="sc">^</span><span class="dv">2</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>Ex3.3(指数分布)</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="乱数の発生.html#cb3-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb3-2"><a href="乱数の発生.html#cb3-2" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="fu">runif</span>(n)</span>
+<span id="cb3-3"><a href="乱数の発生.html#cb3-3" aria-hidden="true" tabindex="-1"></a>lambda <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb3-4"><a href="乱数の発生.html#cb3-4" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="sc">-</span> <span class="fu">log</span>(u) <span class="sc">/</span> lambda</span>
+<span id="cb3-5"><a href="乱数の発生.html#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="乱数の発生.html#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x, <span class="at">prob=</span><span class="cn">TRUE</span>)</span>
+<span id="cb3-7"><a href="乱数の発生.html#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="乱数の発生.html#cb3-8" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">8</span>, .<span class="dv">1</span>)</span>
+<span id="cb3-9"><a href="乱数の発生.html#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(y, <span class="fu">dexp</span>(y))</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Ex3.4(ベルヌーイ分布)</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="乱数の発生.html#cb4-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb4-2"><a href="乱数の発生.html#cb4-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fl">0.4</span></span>
+<span id="cb4-3"><a href="乱数の発生.html#cb4-3" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="fu">runif</span>(n)</span>
+<span id="cb4-4"><a href="乱数の発生.html#cb4-4" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(u <span class="sc">&gt;</span> <span class="fl">0.6</span>)</span>
+<span id="cb4-5"><a href="乱数の発生.html#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="乱数の発生.html#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x)</span></code></pre></div>
+<pre><code>## [1] 0.378</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="乱数の発生.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(x)</span></code></pre></div>
+<pre><code>## [1] 0.2353514</code></pre>
+<p>Ex3.5(幾何分布)</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="乱数の発生.html#cb8-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb8-2"><a href="乱数の発生.html#cb8-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fl">0.25</span></span>
+<span id="cb8-3"><a href="乱数の発生.html#cb8-3" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="fu">runif</span>(n)</span>
+<span id="cb8-4"><a href="乱数の発生.html#cb8-4" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">log</span>(<span class="dv">1</span><span class="sc">-</span>u) <span class="sc">/</span> <span class="fu">log</span>(<span class="dv">1</span><span class="sc">-</span>p)) <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb8-5"><a href="乱数の発生.html#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="乱数の発生.html#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(k, <span class="at">prob=</span><span class="cn">TRUE</span>)</span>
+<span id="cb8-7"><a href="乱数の発生.html#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="乱数の発生.html#cb8-8" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">8</span>, <span class="dv">1</span>)</span>
+<span id="cb8-9"><a href="乱数の発生.html#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(y, <span class="fu">dgeom</span>(y, <span class="at">prob =</span> <span class="fl">0.25</span>))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+<div id="受容棄却法" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> 受容棄却法</h2>
+<p>Ex3.5(ベータ分布)</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="乱数の発生.html#cb9-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb9-2"><a href="乱数の発生.html#cb9-2" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">0</span>  <span class="co"># accepted数</span></span>
+<span id="cb9-3"><a href="乱数の発生.html#cb9-3" aria-hidden="true" tabindex="-1"></a>j <span class="ot">&lt;-</span> <span class="dv">0</span>  <span class="co"># iteration回数(1000個の乱数を作成するのに要した)</span></span>
+<span id="cb9-4"><a href="乱数の発生.html#cb9-4" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n)</span>
+<span id="cb9-5"><a href="乱数の発生.html#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="乱数の発生.html#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span>(k <span class="sc">&lt;</span> n) {</span>
+<span id="cb9-7"><a href="乱数の発生.html#cb9-7" aria-hidden="true" tabindex="-1"></a>  u <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">1</span>)</span>
+<span id="cb9-8"><a href="乱数の発生.html#cb9-8" aria-hidden="true" tabindex="-1"></a>  j <span class="ot">&lt;-</span> j <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb9-9"><a href="乱数の発生.html#cb9-9" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">1</span>)  <span class="co"># gから生成</span></span>
+<span id="cb9-10"><a href="乱数の発生.html#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(x <span class="sc">*</span> (<span class="dv">1</span><span class="sc">-</span>x) <span class="sc">&gt;</span> u) {</span>
+<span id="cb9-11"><a href="乱数の発生.html#cb9-11" aria-hidden="true" tabindex="-1"></a>    k <span class="ot">&lt;-</span> k <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb9-12"><a href="乱数の発生.html#cb9-12" aria-hidden="true" tabindex="-1"></a>    y[k] <span class="ot">&lt;-</span> x</span>
+<span id="cb9-13"><a href="乱数の発生.html#cb9-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb9-14"><a href="乱数の発生.html#cb9-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-15"><a href="乱数の発生.html#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="乱数の発生.html#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="乱数の発生.html#cb9-17" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">seq</span>(.<span class="dv">1</span>, .<span class="dv">9</span>, .<span class="dv">1</span>)</span>
+<span id="cb9-18"><a href="乱数の発生.html#cb9-18" aria-hidden="true" tabindex="-1"></a>Qhat <span class="ot">&lt;-</span> <span class="fu">quantile</span>(y, p) <span class="co"># sample</span></span>
+<span id="cb9-19"><a href="乱数の発生.html#cb9-19" aria-hidden="true" tabindex="-1"></a>Q <span class="ot">&lt;-</span> <span class="fu">qbeta</span>(p, <span class="dv">2</span>, <span class="dv">2</span>)  <span class="co"># theoretical</span></span>
+<span id="cb9-20"><a href="乱数の発生.html#cb9-20" aria-hidden="true" tabindex="-1"></a>se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(p <span class="sc">*</span> (<span class="dv">1</span><span class="sc">-</span>p) <span class="sc">/</span> ( n <span class="sc">*</span> <span class="fu">dbeta</span>(Q, <span class="dv">2</span>, <span class="dv">2</span>)<span class="sc">^</span><span class="dv">2</span>))</span>
+<span id="cb9-21"><a href="乱数の発生.html#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="乱数の発生.html#cb9-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-23"><a href="乱数の発生.html#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">rbind</span>(Qhat, Q, se), <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##        10%   20%   30%   40%   50%   60%   70%   80%   90%
+## Qhat 0.195 0.288 0.359 0.430 0.496 0.563 0.634 0.711 0.807
+## Q    0.196 0.287 0.363 0.433 0.500 0.567 0.637 0.713 0.804
+## se   0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003</code></pre>
+</div>
+<div id="変換法" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> 変換法</h2>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(Z \sim N(0,1)\)</span> のとき <span class="math inline">\(V = Z^{2} \sim \chi^{2}(1)\)</span></li>
+</ol>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="基本.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="基本.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cross.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -248,7 +326,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/00-intro.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-generate-random-variable.Rmd",
 "text": "Edit"
 },
 "history": {

@@ -12,3 +12,6 @@ captioned-figures-and-tables-1
 基本その一
 基本その二
 基本-1
+逆変換法
+受容棄却法
+変換法

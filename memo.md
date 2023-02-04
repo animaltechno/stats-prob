@@ -46,5 +46,6 @@ previewでローカルサーバーを利用しbuildでdocsフォルダにhtmlフ
 
 
 ## 参考文献
-[bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)
+- [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)
 
+- [逆関数法](https://ja.wikipedia.org/wiki/%E9%80%86%E9%96%A2%E6%95%B0%E6%B3%95)
