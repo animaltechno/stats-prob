@@ -1,0 +1,56 @@
+# 乱数の発生
+
+
+
+Rには様々な分布から乱数を生成させる関数があり、関数名の頭文字がその用途を表す。
+
+- `r` : 擬似乱数(random generator)
+- `d` : 密度関数(density/mass fonction)
+- `p` : 分布関数(cummulative distribution function)
+- `q` : 分位点関数(quantile function)
+
+
+二項分布(Binomial)の場合、$Bin(n, p) =  {}_n C_k p^{k} (1-p)^{n-k}$
+
+- `dbinom(x, size, prob)`
+- `rbinom(n, size, prob)`
+- `pbinom()`
+- `qbinom()`
+
+```{r}
+
+
+
+```
+
+一様疑似乱数(uniform pseudo-random number generator)を生成するには`runif`を使う。
+
+- Uniform(0,1)からn個の一様乱数を生成する　`runif(n)`
+- Uniform(a,b)からn個の一様乱数を生成する `runif(a,b,n)`
+- Uniform(0,1)から(n,m)行列の一様乱数を生成する `matrix(runif(n*m), n, m`
+
+```{r eval=FALSE, include=TRUE}
+x <- sample(1:3, size=10, replace=TRUE, prob=c(.2, .3, .5))
+table(x)
+```
+
+有限母集団(finite population)からサンプルを生成するには`sample`を使う。
+
+- `sample(0:1, size=10, replace=TRUE)` : コイン投げ
+- `sample(letters)` : 小文字
+- 指定した分布からサンプルする `sample(1:3, size=10, replace=TRUE, prob=c(.2, .3, .5)`
+
+
+
+
+```{r}
+n <- 1000
+u <- runif(n)
+x <- u^(1/3)
+hist(x, prob=TRUE, main=expression(f(x) == 3*x^2))
+
+
+y <- seq(0, 1, .01)
+lines(y, 3*y^2)
+```
+

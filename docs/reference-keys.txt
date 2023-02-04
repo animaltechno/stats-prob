@@ -6,3 +6,9 @@ chapters-and-sub-chapters
 captioned-figures-and-tables
 parts
 線形代数
+chapters-and-sub-chapters-1
+captioned-figures-and-tables-1
+基本
+基本その一
+基本その二
+基本-1

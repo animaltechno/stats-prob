@@ -13,11 +13,12 @@ link-citations: yes
 github-repo: animaltechno/stats-prob
 ---
 
+
+
+
+
 # はじめに{-}
 
 Rに関する確率と統計に関するメモ
-
-
-
 
 

@@ -1,17 +1,38 @@
-# 乱数の発生
+# 基本
 
-Rには様々な分布から乱数を生成させる関数があり、各関数名の頭文字がその用途を表す。
+Cross-references make it easier for your readers to find and link to elements in your book.
 
-- `r` : 擬似乱数発生の関数
-- `d` : 密度関数
-- `p` : 分布関数
-- `q` : 分位点関数
+## 基本
 
-```{r}
-set.seed(12345)
+- aからbのステップhの数列 `seq(a, b, h)`
+- aからbのステップ1の数列 `a:b`
+- ゼロベクトル `numeric(n)`, `integer(n)`, `rep(0,n)`
+- ゼロ行列 `matrix(0, n. m)`
 
-rnorm(3)
 
-rnorm(3)
+- 行列の掛け算 `A %*% B`
+- 行列の転置 `t(A)`
+- 逆行列 `solve(A)`
+- 直行行列 `diag(A)`　
+
+
+
+## 基本(その二)
+
+Figures and tables *with captions* can also be cross-referenced from elsewhere in your book using `\@ref(fig:chunk-label)` and `\@ref(tab:chunk-label)`, respectively.
+
+See Figure \@ref(fig:nice-fig).
+
+```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center', fig.alt='Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases.'}
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 19)
 ```
 
+Don't miss Table \@ref(tab:nice-tab).
+
+```{r nice-tab, tidy=FALSE}
+knitr::kable(
+  head(pressure, 10), caption = 'Here is a nice table!',
+  booktabs = TRUE
+)
+```
